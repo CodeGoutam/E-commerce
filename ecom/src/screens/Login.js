@@ -9,7 +9,7 @@ const Login = () => {
   };
   const loginFetching = async (e) => {
     e.preventDefault();
-    let response = await fetch(`http://localhost:5000/api/login`, {
+    let response = await fetch(`https://e-commerce-navy-pi.vercel.app/api/login`, {
         mode: 'no-cors', 
     method: "POST",
       headers: { "Content-Type": "application/json" },
