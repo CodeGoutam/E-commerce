@@ -11,7 +11,7 @@ const cors = require('cors')
 // });
 app.use(cors(
     {
-        origin: ["https://deploy-mern-frontend.vercel.app"],
+        origin: ["https://e-commerce-f-one.vercel.app"],
         methods: ["POST", "GET"],
         credentials: true
     }
