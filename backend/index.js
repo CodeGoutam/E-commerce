@@ -12,7 +12,7 @@ const cors = require('cors')
 app.use(cors(
     {
         origin: ["https://e-commerce-f-one.vercel.app"],
-        methods: ["POST", "GET"],
+        methods: ["POST", "GET", "OPTION"],
         credentials: true
     }
 ));
