@@ -14,7 +14,7 @@ const Home = () => {
     // localStorage.setItem("state", state);
     const fetching = async () => {
         let response = await fetch(`https://e-commerce-navy-pi.vercel.app/api/fooditem`, {
-           // mode: 'no-cors',
+           mode: 'no-cors',
             method: "POST",
             headers: { "Content-Type": "application/json" },
         });
