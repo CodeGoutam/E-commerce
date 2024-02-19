@@ -2,21 +2,27 @@ const express = require("express");
 const router = express.Router();
 const mongoose = require("mongoose");
 
-
-
-display();
-router.post("/fooditem", async(req, res) => {
-    try {
-        const items = mongoose.connection.db.collection("food_items");
+let foodItems;
+let foodCat;
+const display = async () => {
+    // await mongoose.connect("mongodb://localhost:27017/gofood")
+    await mongoose.connect("mongodb+srv://hgoutam2001:ecommerce@cluster0.pzsxlbg.mongodb.net/gofood?retryWrites=true&w=majority")
+    const items = mongoose.connection.db.collection("food_items");
     const category = mongoose.connection.db.collection("food_category");
-        let foodItems = await items.find({}).toArray();
-        let foodCat = await category.find({}).toArray();
+    foodItems = await items.find({}).toArray();
+    foodCat = await category.find({}).toArray();
+
+}
+display()
+router.post("/fooditem", (req, res) => {
+
+    try {
 
         res.send([foodItems, foodCat]);
-        console.log(foodItems)
+        // console.log(foodItems)
     } catch (e) {
         console.log(e);
     }
-    console.log("fooditems")
+
 });
 module.exports = router;

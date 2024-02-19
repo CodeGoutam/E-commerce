@@ -8,9 +8,9 @@ const Cart = () => {
     let price = 0;
     let email = localStorage.getItem("email");
     const handleCheckout = async () => {
-        const fetchingOrdersApi = await fetch(`https://e-commerce-navy-pi.vercel.app/api/orders`, {
-            mode: 'no-cors',   
-        method: "POST",
+        const fetchingOrdersApi = await fetch(`http://localhost:5000/api/orders`, {
+            mode: 'no-cors',
+            method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email: email, data: state }),
         });
