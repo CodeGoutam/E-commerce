@@ -21,7 +21,7 @@ app.use(cors(
 console.log("db connectedd");
 app.use(express.json());
 express.urlencoded({ extended: true });
-app.use("/", () => console.log("Backend connected"));
+
 app.use("/api", require("./foodItems"));
 app.use("/api", require("./signUp"));
 app.use("/api", require("./signIn"));

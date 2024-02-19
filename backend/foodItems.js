@@ -16,13 +16,7 @@ const display = async () => {
 display()
 router.post("/fooditem", (req, res) => {
 
-    try {
-
-        res.send([foodItems, foodCat]);
-        // console.log(foodItems)
-    } catch (e) {
-        console.log(e);
-    }
+       res.send([foodItems, foodCat]);
 
 });
 module.exports = router;
