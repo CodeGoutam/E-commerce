@@ -17,8 +17,8 @@ const Home = () => {
             method: "POST",
             headers: { "Content-Type": "application/json" },
         });
-        let data = await response.json();
-        // console.log(data);
+        var data = await response.json();
+        console.log(data);
         setItems(data[0]);
         setCategory(data[1]);
     };
