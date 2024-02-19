@@ -12,7 +12,8 @@ const cors = require('cors')
 // });
 app.use(cors(
     {
-        origin: [`https://e-commerce-f-one.vercel.app`],
+        // origin: [`https://e-commerce-f-one.vercel.app`],
+        origin: [`https://e-commerce-f-one.vercel.app/`],
         // origin: [`http://localhost:3000`],
         methods: ["POST", "GET", "OPTION"],
         credentials: true
@@ -23,7 +24,7 @@ app.use(express.json());
 express.urlencoded({ extended: true });
 
 app.use("/", (req, res) => {
-res.send("backend conneceted")
+    res.send("backend conneceted")
 });
 app.use("/api", require("./foodItems"));
 app.use("/api", require("./signUp"));
