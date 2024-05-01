@@ -10,7 +10,7 @@ const Login = () => {
     const loginFetching = async (e) => {
         e.preventDefault();
         let response = await fetch(`http://localhost:5000/api/login`, {
-                       method: "POST",
+            method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email: data.email, password: data.password }),
         });

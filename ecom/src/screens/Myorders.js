@@ -5,7 +5,7 @@ const Myorders = () => {
     let res;
     const [data, setData] = useState([])
     const fetchingFunction = async () => {
-        const response = await fetch(`https://e-commerce-navy-pi.vercel.app/api/myorders`,
+        const response = await fetch(`http://localhost:5000/api/myorders`,
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },

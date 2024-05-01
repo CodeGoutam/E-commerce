@@ -11,9 +11,8 @@ const Home = () => {
     const [search, setsearch] = useState("");
     // localStorage.setItem("state", state);
     const fetching = async () => {
-        // let response = await fetch(`http://localhost:5000/api/fooditem`, {
-            let response = await fetch(`https://e-commerce-navy-pi.vercel.app/api/fooditem`, {
-           
+        let response = await fetch(`http://localhost:5000/api/fooditem`, {
+        // let response = await fetch(`https://e-commerce-s5ty.onrender.com/api/fooditem`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
         });
