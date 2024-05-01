@@ -15,8 +15,7 @@ const Signup = () => {
     const fetching = async (e) => {
         e.preventDefault();
         const response = await fetch(`https://e-commerce-navy-pi.vercel.app/api/signup`, {
-            mode: 'no-cors',
-            method: "POST",
+                     method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({
                 name: data.name,

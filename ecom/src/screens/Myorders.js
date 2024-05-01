@@ -7,7 +7,6 @@ const Myorders = () => {
     const fetchingFunction = async () => {
         const response = await fetch(`https://e-commerce-navy-pi.vercel.app/api/myorders`,
             {
-                mode: 'no-cors',
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify({ email: localStorage.getItem('email') })
