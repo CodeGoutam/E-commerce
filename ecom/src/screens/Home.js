@@ -12,7 +12,8 @@ const Home = () => {
     // localStorage.setItem("state", state);
     const fetching = async () => {
         // let response = await fetch(`http://localhost:5000/api/fooditem`, {
-        let response = await fetch(`https://e-commerce-s5ty.onrender.com/api/fooditem`, {
+        // let response = await fetch(`https://e-commerce-s5ty.onrender.com/api/fooditem`, {
+        let response = await fetch(`https://e-commerce-jade-one.vercel.app/api/fooditem`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
         });

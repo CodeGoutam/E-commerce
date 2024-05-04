@@ -5,7 +5,8 @@ const Myorders = () => {
     let res;
     const [data, setData] = useState([])
     const fetchingFunction = async () => {
-        const response = await fetch(`https://e-commerce-s5ty.onrender.com/api/myorders`,
+        // const response = await fetch(`https://e-commerce-s5ty.onrender.com/api/myorders`,
+        const response = await fetch(`https://e-commerce-jade-one.vercel.app/api/myorders`,
             {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
