@@ -7,6 +7,7 @@ express.urlencoded({ extended: true });
 app.get("/", (req, res) => {
     res.send("backend connected")
 });
+
 app.use("/api", require("./foodItems"));
 app.use("/api", require("./signUp"));
 app.use("/api", require("./signIn"));
