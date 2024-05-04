@@ -9,8 +9,7 @@ const Login = () => {
     };
     const loginFetching = async (e) => {
         e.preventDefault();
-        // let response = await fetch(`https://e-commerce-s5ty.onrender.com/api/login`, {
-        let response = await fetch(`https://e-commerce-jade-one.vercel.app/api/login`, {
+        let response = await fetch(`https://e-commerce-s5ty.onrender.com/api/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email: data.email, password: data.password }),
