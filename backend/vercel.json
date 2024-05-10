@@ -1,20 +1,19 @@
-
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "/*.js",
-        "use": "@vercel/node"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "/"
-      },
-      { "src": "/api/signup", "dest": "./signUp.js" },
+  "version": 2,
+  "builds": [
+    {
+      "src": "/*.js",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "/"
+    },
+    { "src": "/api/signup", "dest": "./signUp.js" },
     { "src": "/api/login", "dest": "./login.js" },
     { "src": "/api/fooditem", "dest": "./foodItems.js" },
     { "src": "/api/orders", "dest": "./Orders.js" }
-    ]
-  }
+  ]
+}
